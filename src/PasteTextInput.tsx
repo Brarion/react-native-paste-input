@@ -253,8 +253,12 @@ function InternalTextInput(props: PasteInputProps): React.ReactNode {
     };
 
     const _onPaste = (event: PasteEvent) => {
+        console.log('RRRRRRRRRRR');
+        console.log(props);
         if (props.onPaste) {
             const { data, error } = event.nativeEvent;
+            console.log(data);
+            console.log(error);
             props.onPaste(error?.message, data);
         }
     };
